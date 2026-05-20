@@ -1,0 +1,30 @@
+Projet Nina Carducci
+
+Performances :
+
+	- Enlever le jQuery au profit d'un JS plus moderne ?
+
+	- Revoir les requêtes qui bloquent le rendu de la page
+	X Minimiser les tailles d'images (et utiliser des formats plus modernes)
+	- Faire afficher les images du slider dans le HTML directement
+	- Revoir l'arborescence des dépendances réseau ?
+	
+	- Minify JS et CSS
+	- Supprimer les ressources JS et CSS inutilisées
+	- Voir si le cache amélioré peut-être utilisé
+	- Spécifier les height/weight des images
+	- Minimiser le main thread work
+	
+Accessibilité :
+
+	- Ajouter les alt
+	- Associer les labels aux inputs du form
+	- Ajouter un title à l'index
+	- Nommer les liens (aria-label)
+	- Ajouter le lang à l'index
+	- Revoir les h6, h3
+	- Revoir la sémantique HTML
+	
+SEO : 
+
+	- Mettre en place les meta description
