@@ -1,0 +1,106 @@
+Rapport débuggage du site "Nina Carducci"
+
+Le but de la manoeuvre est de livrer un site rapide et fiable,
+accessible pour les personnes en situation de handicap et le plus
+facilement maintenable à l'avenir.
+
+Performances (64% au départ, 98% maintenant) :
+	(Permet au site d'être le plus rapide possible à l'affichage. Google utilise
+	directement les performances des sites pour son référencement, les sites avec
+	de bonnes perfromances sont mis en avant par rapport aux autres. Permet aussi
+	de rendre la viste du site plus confortable).
+			
+		- Mise à jour de Bootstrap (framework CSS/JS) (v5.1.3 => v5.3.8).
+		
+		- Bootsrap minifié (permet d'alléger le code CSS et JavaScript en 
+			supprimant au chargement tout les éléments visuels nécéssaires aux
+			humains mais superflus aux machines).
+		
+		- Chargement différé du JavaScrpit pour améliorer la rapidité de chargement
+			du visuel de la page.
+		
+		- Suppression de JQuery, bibliothèque JavaScript aujourd'hui obsolète
+			car trop lourde et gourmande en terme de performances.
+		
+		- Remplacement de JQuery par du JavaScript natif, solution plus moderne
+			et meilleures performances.
+		
+		- Suppression de MauGallery (bibliothèque JavaScript affiliée à JQuery
+			servant à afficher la modale de la galerie d'images, styliser la galerie
+			et afficher/faire fonctionner la barre de filtres, aujourd'hui obsolète
+			pour les mêmes raisons que JQuery).
+		
+		- Remplacement de MauGallery par BaguetteBox, bibliothèque plus récente avec
+			un affichage plus moderne, plus légère et moins gourmande en performances.
+			
+		- Remplacement de MauGallery par du CSS natif pour le style visuel de la galerie,
+			solution plus moderne et meilleures performances.
+			
+		- Remplacement de MauGallery pour la barre de filtre par du HTML/CSS/JS, solution
+			plus moderne et meilleures performances.
+	
+		- Changement du format des images de JPEG à WebP (format plus moderne qui permet
+			d'économiser environ 25% à 50% de taille d'image, ce qui permet un chargement
+			de page plus rapide tout en gardant une bonne qualité d'image).
+			
+		- Utilisation de TinyPNG pour compresser les images et gagner entre 50% et 70% de
+			poids d'images.
+		
+		- Cropping de toutes les images du site pour améliorer la rapidité du site tout
+			en étant efficace sur le responsive (ce qui permet au site de s'adapter sur toutes
+			les tailles d'écrans).
+	
+		- Demande au navigateur de passer la première image de la page en "hero" au chargement
+			avec l'attribut HTML fetchpriority="high", optimisation moderne pour améliorer les 
+			performances de la page.
+				
+Accessibilité (67% au départ, 96% maintenant) et SEO (73% au départ, 100% maintenant) :
+	(Très important pour les personnes en situation de handicap, et celles atteintes de troubles
+	ou certaines maladies. Est aussi très important pour le référencement, le SEO. De manière
+	générale, Google valorise les sites avec une bonne accessibilité et une bonne structure).
+	
+		- Ajout des alt sur les images (indispensable pour les lecteurs d'écran, permet de
+			nommer les images lorsqu'elles ne s'affichent pas. Google lit aussi les alt pour
+			comprendre et interpréter les images, ce qui aide au référencement).
+			
+		- Ajout des aria-label sur les bouttons (indispensable pour les lecteurs d'écran, permet de
+			nommer les éléments comme les boutons, ce qui aide à la compréhension).
+			
+		- Association des labels et input dans le formulaire d'envoi (permet aux lecteurs d'écran
+			de bien retranscrire ce qu'il se passe à l'écran et améliore la zone cliquable sur pc
+			ainsi que sur mobile. Google lit aussi plus facilement la structure du site avec cet ajout).
+			
+		- Ajout du <title> sur le document HTML (Permet de voir le nom de la page dans l'affichage de
+			l'onglet. Très important aussi pour le SEO car Google utilise souvent le titre dans les
+			résultats de recherche et s'en sert pour appréhender le contenu de la page).
+			
+		- Ajout de l'attribut <lang="fr"> au document HTML (Permet d'indiquer la langue principale 
+			de la page. Les lecteurs d'écran peuvent donc prononcer correctement les textes avec 
+			le bon accent et les spécificités de la langue).
+			
+		- Mise à jour de la sémantique HTML (Permet aux lecteurs d'écran de bien séparer les
+			différentes parties de la page web, plutôt que de tout lire en blocs, ce qui rend la
+			navigation très difficle).
+			
+		- Revue de l'ordre des titres <h> (La hiérarchie est très importante en accessibilité pour
+			créer une sorte de "sommaire" interne à la page. Google utilise aussi les titres pour
+			le SEO, ce qui lui permet d'appréhender le sujet de la page, la structure du site etc.
+			Aide aussi à la navigation rapide).
+			
+		- Ajout de la meta description (Résumé court de la page web, lu et utilisé par les moteurs
+			de recherche. S'affiche sous le titre du résultat de recherche. Elle sert à 
+			"attirer le clic").
+		
+		-Ajout des metas réseaux sociaux Open Graph et Twitter (Permet d'avoir de bonnes présentations
+			sur les partages au sein des réseaux sociaux).
+			
+		- Ajout des rich snippets avec le balisage Schema.org (Utile pour améliorer le taux de clic,
+			aider Google à comprendre la page).
+			
+		- Correction des fautes d'orthographe, mots manquants, ainsi qu'une erreur d'auteur sur la
+			deuxième citation.
+			
+		- Revue de la mise en page du document HTML pour aider aux éventuels prochains travaux de
+			maintenance.
+			
+		- Correction des catégories des images pour une meilleure compréhension en maintenance.
